@@ -12,12 +12,15 @@ import Calculator from 'components/ex2/Calculator';
 import Calculator_DONE from 'components/ex2/Calculator_DONE';
 import DataFetch_DONE from 'components/ex3/DataFetch_DONE';
 import DataFetch from 'components/ex3/DataFetch';
+import SimpleForm from 'components/ex4/SimpleForm';
+import SimpleForm_DONE from 'components/ex4/SimpleForm_DONE';
 import './Main.scss';
 
 const idToComponent = {
 	1: [Button, Button_DONE],
 	2: [Calculator, Calculator_DONE],
 	3: [DataFetch, DataFetch_DONE],
+	4: [SimpleForm, SimpleForm_DONE],
 };
 const initialProps = {
 	initialCount: 5,
@@ -65,6 +68,7 @@ const Sidebar = () => (
 		<Link to="/c/1">Button</Link>
 		<Link to="/c/2">Calculator</Link>
 		<Link to="/c/3/Jon">Dynamic Data</Link>
+		<Link to="/c/4">Form Flow</Link>
 	</div>
 );
 

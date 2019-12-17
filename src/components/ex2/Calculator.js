@@ -6,6 +6,8 @@ import './Calculator.scss';
 	 I just did all the visual work beforehand, so you can go right into
 	 coding the component itself.
 
+	⏰ Time allocated: 30-40 minutes
+
 	The concept is simple, but the implementation may be more complex than
 	 you would initially think. This exercise is meant to help build a good
 	 understanding of state management.
@@ -49,7 +51,7 @@ export default class Calculator extends Component {
 		return (
 			<div id="calculator">
 				<div id="output-display">
-					{/* ✨ Calculator display state goes here */}
+					{/* ✨ Calculator value state goes here */}
 				</div>
 				{/* ✨ Add the clearing operation to this button! */}
 				<div id="clear-button" className="button">

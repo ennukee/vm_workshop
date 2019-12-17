@@ -5,6 +5,8 @@ import './Button.scss';
     Welcome to the first exercise -- we'll be building the
 	most common "first exercise" component, a Button.
 
+	⏰ Time allocated: 10-15 minutes
+
 	Tasks in all of these files will be marked with emojis
 	  ✨ Adding a feature
 	  💚 Refactoring / Tip

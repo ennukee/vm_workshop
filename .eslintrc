@@ -16,6 +16,7 @@
 		"react/jsx-props-no-spreading": "off",
 		"jsx-a11y/click-events-have-key-events": "off",
 		"jsx-a11y/mouse-events-have-key-events": "off",
+		"max-classes-per-file": "off",
 		// Differences from VM1 for the sake of ESLint not spamming our code
 
 		"arrow-parens": "off",

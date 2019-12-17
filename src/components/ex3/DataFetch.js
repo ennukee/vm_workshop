@@ -9,6 +9,8 @@ import requestApi from './util/fetch';
 	This exercise focuses on Lifecycle Methods -- specifically the two
 	 most common, componentDidMount and componentDidUpdate.
 
+	⏰ Time allocated: 20-25 minutes
+
 	💚 componentDidMount is ran whenever a component is FIRST LOADED. It
 		will run ONCE and never again until it is removed (more below the
 		code if you want some specifics)
