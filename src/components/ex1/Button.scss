@@ -1,0 +1,25 @@
+#button {
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid var(--darker);
+    color: var(--darker);
+    font-weight: 400;
+    background-color: var(--light);
+    cursor: pointer;
+    transition: background-color 0.16s;
+
+    &:hover {
+        transition: background-color 0.16s;
+        background-color: var(--lighter);
+        -webkit-transition: background-color 0.16s;
+        -moz-transition: background-color 0.16s;
+        -ms-transition: background-color 0.16s;
+        -o-transition: background-color 0.16s;
+    }
+}
+
+#count {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
