@@ -32,12 +32,15 @@ import './Button.scss';
 */
 
 export default class Button extends Component {
+	static defaultProps = {
+		initialCount: 0,
+	}
 	state = {
 		// Existing state stuff
 	}
 	render() {
 		return (
-			<div id="button">Click me</div>
+			<div className="ex1 button">Click me</div>
 		);
 	}
 }

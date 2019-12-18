@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './Button.scss';
 
 export default class Button extends Component {
+	static defaultProps = {
+		initialCount: 0,
+	}
 	state = {
 		// ✨ Check our props for `initialCount`, otherwise set it to 0!
 		count: this.props.initialCount || 0,
@@ -32,7 +35,7 @@ export default class Button extends Component {
 			<>
 				<div id="count">{ count }</div>
 				<div
-					id="button"
+					className="ex1 button"
 					onClick={this.handleClick}
 					onMouseOver={this.handleMouseOver}
 				>

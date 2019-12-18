@@ -44,7 +44,7 @@
         }
         
     }
-    .number-button, #clear-button {
+    .number.button, #clear-button {
         background-color: var(--lighter);
         color: var(--darker);
         // font-size
@@ -52,7 +52,7 @@
             background-color: var(--light);
         }
     }
-    .op-button {
+    .operation.button {
         background-color: var(--darker);
         color: var(--lighter);
         &:active {

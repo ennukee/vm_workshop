@@ -7,7 +7,8 @@ export default class Calculator extends Component {
 		lastOperation: null, // Track last operation used
 		value: '',
 	}
-	handleClick = (event, clickedValue) => {
+	handleClick = (event) => {
+		const clickedValue = event.target.getAttribute('data-which');
 		// 💚 When + is used as an unary operator, it is identical to Number(value)
 		//     and when it fails, it returns NaN, which will fail a conditional
 		//     Thus, this conditional only passes when value is a number.
@@ -83,8 +84,9 @@ export default class Calculator extends Component {
 						<div
 							id={`button-b${value}`}
 							key={`key-${value}`}
-							className={+value ? 'button number-button' : 'button op-button'}
-							onClick={(e) => this.handleClick(e, value)}
+							data-which={value}
+							className={+value ? 'button number' : 'button operation'}
+							onClick={this.handleClick}
 						>
 							{value}
 						</div>

@@ -29,8 +29,6 @@ import './Calculator.scss';
 		display the output.
 	   💚 For simplicity sake, you can use alert(...) to display your value and just
 	       reset state immediately.
-	🍰🔥 How could you refactor our handleClick to no longer need us passing in `value`?
-		  Hint: This requires usage of the `event` param
 	🍰 Question: How might you approach allowing the user to use their keyboard
 	    to enter numbers?
 */
@@ -40,7 +38,8 @@ export default class Calculator extends Component {
 		// Existing state stuff
 		value: '',
 	}
-	handleClick = (event, clickedValue) => {
+	handleClick = (event) => {
+		const clickedValue = event.target.getAttribute('data-which');
 		// ✨ Implement me!
 		// 💚 This function will handle all button clicks in the calculator
 		//     You can trust that "clickedValue" here is equivalent to the number or
@@ -64,8 +63,9 @@ export default class Calculator extends Component {
 						<div
 							id={`button-b${value}`}
 							key={`key-${value}`}
-							className={+value ? 'button number-button' : 'button op-button'}
-							onClick={(e) => this.handleClick(e, value)}
+							data-which={value}
+							className={+value ? 'button number' : 'button operation'}
+							onClick={this.handleClick}
 						>
 							{value}
 						</div>
