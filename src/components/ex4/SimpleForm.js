@@ -71,6 +71,6 @@ export default class SimpleForm extends Component {
 				<Button value="Print Input" />
 				<Button value="B2" />
 			</div>
-		)
+		);
 	}
 }

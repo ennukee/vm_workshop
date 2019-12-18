@@ -7,7 +7,8 @@ import requestApi from './util/fetch';
 
 /*
 	This exercise focuses on Lifecycle Methods -- specifically the two
-	 most common, componentDidMount and componentDidUpdate.
+	 most common, componentDidMount and componentDidUpdate -- as well as
+	 JavaScript asynchronousness / Promises.
 
 	⏰ Time allocated: 20-25 minutes
 
@@ -28,13 +29,21 @@ export default class DataFetch extends Component {
 		// ✨ 1. Write your default state here for age, hobby, and name
 	}
 	componentDidMount = () => {
-		// ✨ 3. Implement this using requestApi, which takes a single string param.
-		//     You can access the param via `this.props.param`
-		// ✨ 4. The result will be an object with keys "age", "hobby", and "name".
-		//     store all of these in state.
-		// 🍰 Check if the response is null -- if it is,
-		//     handle it however you like (clear state, use an alert, etc) but
-		//     make it obvious to the user something went wrong
+		/*
+			✨ 3. Implement this using requestApi, which takes a single string param.
+				You can access the param via `this.props.param`
+				💚 requestApi is asynchronous, just like `fetch` for HTTP requests,
+					which means you'll need to use `await` to ensure you're getting
+					a response before continuing.
+					e.g. const resp = await fetch('http://api.google.com', { options })
+			✨ 4. The result will be an object with keys "age", "hobby", and "name".
+				store all of these in state.
+			🍰 Check if the response is null -- if it is,
+				handle it however you like (clear state, use an alert, etc) but
+				make it obvious to the user something went wrong
+			🍰🍰 Add and use a "loading" state to show a placeholder value while
+			       we are waiting for a response from the server.
+		*/
 	}
 	componentDidUpdate = (previousProps, previousState) => {
 		// ✨ 5. Implement this similarly to above, but compare the current props
@@ -63,10 +72,9 @@ export default class DataFetch extends Component {
 						Hobby:
 					</div>
 					<div id="name">
-						Name: 
+						Name:
 					</div>
 				</div>
-				{/* Don't touch this bit */}
 				<div id="other-people">
 					<Link to="/c/3/Jon">Jon</Link>
 					<Link to="/c/3/Harry">Harry</Link>

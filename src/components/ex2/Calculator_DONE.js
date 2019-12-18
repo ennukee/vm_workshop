@@ -60,7 +60,7 @@ export default class Calculator extends Component {
 			}
 			// Store our new calculated value, set the newly clicked operation for
 			//  next usage, and clear visual state.
-			this.setState({ endValue: newStoredValue, lastOperation: clickedValue, value: '' })
+			this.setState({ endValue: newStoredValue, lastOperation: clickedValue, value: '' });
 		}
 	}
 	handleClear = () => {
@@ -93,6 +93,6 @@ export default class Calculator extends Component {
 					))
 				}
 			</div>
-		)
+		);
 	}
 }

@@ -7,6 +7,7 @@ export default class DataFetch extends Component {
 	state = {
 		age: 0,
 		hobby: '',
+		loading: false, // 🍰🍰
 		name: '',
 	}
 	componentDidMount = () => this.loadData();
@@ -23,16 +24,30 @@ export default class DataFetch extends Component {
 		}
 	}
 	loadData = () => {
-		const data = requestApi(this.props.param);
-		if (!data) {
-			alert('Danger! No response!');
-		}
-		this.setState({ ...data });
+		// 🍰🍰 Set loading to true, then use setState's second param
+		//        to fire off the request in a callback. Once that's done,
+		//        we set loading to false at the same time we set our data.
+		// 💚 setState has a less known second parameter, which takes a function
+		//     that is executed after the state change has been performed (helps
+		//     prevent any state desyncing, since setState is innately async)
+		this.setState({ loading: true }, async () => {
+			const data = await requestApi(this.props.param);
+			if (!data) {
+				alert('Danger! No response!');
+			}
+			this.setState({ ...data, loading: false });
+		});
 	}
 	render() {
-		const { name, age, hobby } = this.state;
+		const {
+			name,
+			age,
+			hobby,
+			loading, // 🍰🍰
+		} = this.state;
 		return (
 			<div id="data-fetch">
+				{ loading ? <div>Loading...</div> : null /* 🍰🍰 */}
 				{
 					// This is ternary syntax, one of the more confusing
 					// bits you may encounter in React code. Since you can't use
@@ -59,7 +74,9 @@ export default class DataFetch extends Component {
 						<div>No data!</div>
 					)
 				}
-				<div id="other-people">
+				{/* NOTE: We use a package called `classnames` at Vestmark to
+					handle className logic like below. */}
+				<div id="other-people" className={loading ? 'disabled' : ''}>
 					<Link to="/c/3/Jon">Jon</Link>
 					<Link to="/c/3/Harry">Harry</Link>
 					<Link to="/c/3/Larry">Larry</Link>

@@ -18,4 +18,13 @@
         -ms-border-radius: 3px;
         -o-border-radius: 3px;
     }
+
+    &.disabled {
+        a {
+            color: grey;
+            border-color: grey;
+            background-color: white;
+            pointer-events: none;
+        }
+    }
 }

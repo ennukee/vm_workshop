@@ -44,7 +44,6 @@ export default class Calculator extends Component {
 		// 💚 This function will handle all button clicks in the calculator
 		//     You can trust that "clickedValue" here is equivalent to the number or
 		//     operation symbol hit in the calculator.
-		console.log(this.state.value, clickedValue);
 	}
 	render() {
 		return (

@@ -1,24 +1,31 @@
-export default (name) => {
+export default async (name) => {
+	let response;
 	switch (name) {
 		case "Jon":
-			return {
+			response = {
 				age: 22,
 				hobby: "Hockey",
 				name: "Jon",
 			};
+			break;
 		case "Larry":
-			return {
+			response = {
 				age: 28,
 				hobby: "Basketball",
 				name: "Larry",
 			};
+			break;
 		case "Harry":
-			return {
+			response = {
 				age: 23,
 				hobby: "Wizardry",
 				name: "Harry",
 			};
+			break;
 		default:
 			return null;
 	}
+	return new Promise((resolve) => {
+		setTimeout(() => resolve(response), Math.random() * 1000 + 500);
+	});
 };

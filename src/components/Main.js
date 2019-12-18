@@ -67,7 +67,7 @@ const Sidebar = () => (
 		<hr />
 		<LinkSection to="/c/1" desc={["Click handlers", "Basic state"]}>Button</LinkSection>
 		<LinkSection to="/c/2" desc={["Complex state management"]}>Calculator</LinkSection>
-		<LinkSection to="/c/3/Jon" desc={["Lifecycle methods"]}>Data Fetching</LinkSection>
+		<LinkSection to="/c/3/Jon" desc={["Lifecycle methods", "Async/Promises"]}>Data Fetching</LinkSection>
 		<LinkSection to="/c/4" desc={["Nested component interaction", "React Refs", "Callbacks"]}>Form</LinkSection>
 	</div>
 );
