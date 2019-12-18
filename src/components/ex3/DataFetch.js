@@ -19,24 +19,25 @@ import requestApi from './util/fetch';
 		This lifecycle has TWO PARAMS representing the props and state of
 		the component prior to its update.
 
-	Look in the code below for your tasks, marked with ✨
+	Look in the code below for your tasks, marked with ✨ -- recommended to read
+	 all of them before starting, they are marked loosely with an order to do them in
 */
 
 export default class DataFetch extends Component {
 	state = {
-		// ✨ Write your default state here
+		// ✨ 1. Write your default state here for age, hobby, and name
 	}
 	componentDidMount = () => {
-		// ✨ Implement this using requestApi, which takes a single string param.
+		// ✨ 3. Implement this using requestApi, which takes a single string param.
 		//     You can access the param via `this.props.param`
-		// ✨ The result will be an object with keys "age", "hobby", and "name".
+		// ✨ 4. The result will be an object with keys "age", "hobby", and "name".
 		//     store all of these in state.
 		// 🍰 Check if the response is null -- if it is,
 		//     handle it however you like (clear state, use an alert, etc) but
 		//     make it obvious to the user something went wrong
 	}
 	componentDidUpdate = (previousProps, previousState) => {
-		// ✨ Implement this similarly to above, but compare the current props
+		// ✨ 5. Implement this similarly to above, but compare the current props
 		//     to the previous props and see if the param has changed. If it has,
 		//     (and ONLY if it has), perform a requestApi call again and refresh
 		//     state with new data.
@@ -54,7 +55,7 @@ export default class DataFetch extends Component {
 						name (e.g. "Bob")
 				 */}
 				<div id="output-display">
-					{/* ✨ Fill in the divs below with your state to be shown */}
+					{/* ✨ 2. Fill in the divs below with your state to be shown */}
 					<div id="age">
 						Age:
 					</div>
