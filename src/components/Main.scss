@@ -14,11 +14,7 @@
     color: var(--lighter);
 
     a {
-        text-decoration: none;
-        color: var(--light);
-        font-size: 20px;
-        font-weight: 500;
-        text-transform: uppercase;
+        
     }
 
     #title {
@@ -26,11 +22,33 @@
         line-height: 1em;
         font-size: 30px;
         font-weight: 300;
+        margin-bottom: 10px;
     }
 
     hr {
         width: 100%;
+        margin-bottom: 15px;
     }
+}
+
+.link-section {
+    a {
+        text-decoration: none;
+        color: var(--light);
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-family: 'Candara';
+    }
+    .link-desc-item {
+        line-height: 1em;
+        font-weight: 300;
+        padding-left: 5px;
+        &:before {
+            content: "- "
+        }
+    }
+    margin-bottom: 15px;
 }
 
 #content {

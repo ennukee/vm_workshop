@@ -65,10 +65,23 @@ const Sidebar = () => (
 			UIS REACT WORKSHOP
 		</div>
 		<hr />
-		<Link to="/c/1">Button</Link>
-		<Link to="/c/2">Calculator</Link>
-		<Link to="/c/3/Jon">Dynamic Data</Link>
-		<Link to="/c/4">Form Flow</Link>
+		<LinkSection to="/c/1" desc={["Click handlers", "Basic state"]}>Button</LinkSection>
+		<LinkSection to="/c/2" desc={["Complex state management"]}>Calculator</LinkSection>
+		<LinkSection to="/c/3/Jon" desc={["Lifecycle methods"]}>Data Fetching</LinkSection>
+		<LinkSection to="/c/4" desc={["Nested component interaction", "React Refs", "Callbacks"]}>Form</LinkSection>
+	</div>
+);
+
+const LinkSection = ({ to, desc = [], children }) => (
+	<div className="link-section">
+		<Link to={to}>{children}</Link>
+		<div className="link-desc">
+			{
+				desc.map((i) => (
+					<div className="link-desc-item">{i}</div>
+				))
+			}
+		</div>
 	</div>
 );
 

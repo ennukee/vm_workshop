@@ -19,8 +19,8 @@ import './Calculator.scss';
 	   🐛 You can safely use the `handleClick` helper below -- the value
 		   param will *always* be the number you clicked, you have my word.
 		   (it can also be / - + = though)
-	✨ When "clear" is clicked, reset our value back to nothing
-	✨ When you click any operaiton ( + - / ) reset the visual to a blank slate.
+	✨ When "clear" is clicked, reset back to defaults.
+	✨ When you click any operation ( + - / ) reset the visual to a blank slate.
 		Also, if you have pressed an operation previously, perform an operation on
 		the currently visible data and the stored data before wiping slate
 	   💚 e.g. "85 -" stores 85 and wipes visual. If you then type 65 +, it will
@@ -31,9 +31,8 @@ import './Calculator.scss';
 	       reset state immediately.
 	🍰🔥 How could you refactor our handleClick to no longer need us passing in `value`?
 		  Hint: This requires usage of the `event` param
-	🍰 If a user presses two operations in a row, only store the latest one
-		(e.g. a user presses 85, then hits + and - subsequently, you only care
-			for the - press)
+	🍰 Question: How might you approach allowing the user to use their keyboard
+	    to enter numbers?
 */
 
 export default class Calculator extends Component {
@@ -42,6 +41,7 @@ export default class Calculator extends Component {
 		value: '',
 	}
 	handleClick = (event, clickedValue) => {
+		// ✨ Implement me!
 		// 💚 This function will handle all button clicks in the calculator
 		//     You can trust that "clickedValue" here is equivalent to the number or
 		//     operation symbol hit in the calculator.

@@ -6,8 +6,9 @@
     font-weight: 400;
     background-color: var(--light);
     cursor: pointer;
-    transition: background-color 0.16s;
-
+    user-select: none;
+    box-shadow: 1px 1px 1px var(--darker);
+    transition: background-color 0.1s;
     &:hover {
         transition: background-color 0.16s;
         background-color: var(--lighter);
@@ -15,6 +16,12 @@
         -moz-transition: background-color 0.16s;
         -ms-transition: background-color 0.16s;
         -o-transition: background-color 0.16s;
+    }
+    border-radius: 3px;
+
+    &:active {
+        background-color: var(--light);
+        box-shadow: inset 1px 1px black;
     }
 }
 

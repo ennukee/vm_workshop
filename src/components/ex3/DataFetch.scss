@@ -1,6 +1,21 @@
 #other-people {
+    margin-top: 10px;
     a {
-        padding-right: 10px;
+        padding: 5px 10px;
+        margin-right: 10px;
         text-decoration: none;
+        border: 1px solid var(--darker);
+        background-color: var(--lighter);
+        color: var(--darker);
+        border-radius: 3px;
+
+        &:active {
+            box-shadow: inset 1px 1px var(--darker);
+            background-color: var(--light);
+        }
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
     }
 }
